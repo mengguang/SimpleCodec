@@ -45,6 +45,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="btnIntToHex">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input can be in base 2, 8, 10, or 16. &lt;/p&gt;&lt;p&gt;Base is determined by a case insensitive suffix of 'b'(2), 'o'(8), or 'h'(16).&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;No suffix means base 10&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
           <property name="text">
            <string>Int -&gt; HEX</string>
           </property>
