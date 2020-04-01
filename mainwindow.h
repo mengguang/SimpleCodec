@@ -37,6 +37,8 @@ private slots:
 
   void on_btnRandom_clicked();
 
+  void on_btnUUID_clicked();
+
  private:
   Ui::MainWindow *ui;
   bool hexOutput;

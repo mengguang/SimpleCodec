@@ -9,6 +9,7 @@
 #define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
 #include "cryptopp/md5.h"
 
+#include <QUuid>
 #include <osrng.h>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -116,4 +117,10 @@ void MainWindow::on_btnRandom_clicked()
   QByteArray data(256,0);
   prng.GenerateBlock((byte *)data.data(), data.size());
   ui->textOutput->setPlainText(data.toHex());
+}
+
+void MainWindow::on_btnUUID_clicked()
+{
+  auto output = QUuid::createUuid().toString(QUuid::WithoutBraces);
+  ui->textOutput->setPlainText(output);
 }
