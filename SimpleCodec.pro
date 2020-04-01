@@ -39,3 +39,6 @@ DEPENDPATH += $$PWD/../../vcpkg/packages/cryptopp_x86-windows/
 
 win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../vcpkg/packages/cryptopp_x86-windows/lib/cryptopp-static.lib
 else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../vcpkg/packages/cryptopp_x86-windows/debug/lib/cryptopp-static.lib
+
+DISTFILES += \
+    README.md
