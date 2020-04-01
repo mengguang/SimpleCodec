@@ -61,6 +61,41 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="btnHashMD5">
+          <property name="text">
+           <string>MD5</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnHashSHA1">
+          <property name="text">
+           <string>SHA1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnHashSHA256">
+          <property name="text">
+           <string>SHA256</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnHashKeccak256">
+          <property name="text">
+           <string>Keccak256</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRandom">
+          <property name="text">
+           <string>Random</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Vertical</enum>

@@ -15,7 +15,8 @@ class MainWindow : public QMainWindow
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
- private slots:
+  QByteArray calcHash(const QString algo, const QByteArray &input);
+private slots:
   void on_btnBase64Encode_clicked();
 
   void on_btnBase64Decode_clicked();
@@ -25,6 +26,16 @@ class MainWindow : public QMainWindow
   void on_btnIntToHex_clicked();
 
   void on_btnIntToDec_clicked();
+
+  void on_btnHashSHA256_clicked();
+
+  void on_btnHashSHA1_clicked();
+
+  void on_btnHashMD5_clicked();
+
+  void on_btnHashKeccak256_clicked();
+
+  void on_btnRandom_clicked();
 
  private:
   Ui::MainWindow *ui;
