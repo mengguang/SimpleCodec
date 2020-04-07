@@ -116,6 +116,13 @@
          </spacer>
         </item>
         <item>
+         <widget class="QCheckBox" name="checkBoxUrlSafe">
+          <property name="text">
+           <string>URL Safe</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QCheckBox" name="checkBoxHexOutput">
           <property name="text">
            <string>Hex Output</string>

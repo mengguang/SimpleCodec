@@ -21,7 +21,11 @@ MainWindow::~MainWindow() { delete ui; }
 
 void MainWindow::on_btnBase64Encode_clicked() {
   auto input = ui->textInput->toPlainText().toUtf8();
-  auto output = input.toBase64();
+  auto options = QByteArray::Base64Encoding;
+  if(urlSafe) {
+    options = QByteArray::Base64UrlEncoding;
+  }
+  auto output = input.toBase64(options);
   if (hexOutput) {
     output = output.toHex();
   }
@@ -30,7 +34,11 @@ void MainWindow::on_btnBase64Encode_clicked() {
 
 void MainWindow::on_btnBase64Decode_clicked() {
   auto input = ui->textInput->toPlainText().toUtf8();
-  auto output = QByteArray::fromBase64(input);
+  auto options = QByteArray::Base64Encoding;
+  if(urlSafe) {
+    options = QByteArray::Base64UrlEncoding;
+  }
+  auto output = QByteArray::fromBase64(input,options);
   if (hexOutput) {
     output = output.toHex();
   }
@@ -123,4 +131,13 @@ void MainWindow::on_btnUUID_clicked()
 {
   auto output = QUuid::createUuid().toString(QUuid::WithoutBraces);
   ui->textOutput->setPlainText(output);
+}
+
+void MainWindow::on_checkBoxUrlSafe_stateChanged(int arg1)
+{
+  if (arg1 == Qt::Checked) {
+    urlSafe = true;
+  } else {
+    urlSafe = false;
+  }
 }

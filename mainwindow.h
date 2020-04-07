@@ -39,8 +39,11 @@ private slots:
 
   void on_btnUUID_clicked();
 
+  void on_checkBoxUrlSafe_stateChanged(int arg1);
+
  private:
   Ui::MainWindow *ui;
-  bool hexOutput;
+  bool hexOutput = false;
+  bool urlSafe = false;
 };
 #endif // MAINWINDOW_H
